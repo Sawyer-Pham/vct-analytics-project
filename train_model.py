@@ -16,12 +16,18 @@ df = pd.read_csv("features.csv")
 # =========================
 
 feature_columns = [
-    "team_a_win_rate",
-    "team_b_win_rate",
-    "team_a_recent_win_rate",
-    "team_b_recent_win_rate",
-    "team_a_matches_played",
-    "team_b_matches_played",
+    #"team_a_win_rate",
+    #"team_b_win_rate",
+    #"team_a_recent_win_rate",
+    #"team_b_recent_win_rate",
+    #"team_a_matches_played",
+    #"team_b_matches_played",
+    #"team_a_avg_acs",
+    #"team_b_avg_acs",
+    "avg_acs_diff",
+    #"team_a_recent_acs",
+    #"team_b_recent_acs",
+    "recent_acs_diff",
     "h2h_a_win_rate",
     "win_rate_diff",
     "recent_win_rate_diff"
