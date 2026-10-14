@@ -8,6 +8,22 @@ This project collects professional VALORANT match data, stores it in a relationa
 
 I built the project to gain hands-on experience with data collection, relational database design, feature engineering, machine learning, and model evaluation using real-world esports data.
 
+## Team Selection UI
+
+Run `python app.py` to open the desktop matchup selector (requires Python with
+Tkinter, included with the standard Windows Python installer). Team A and Team B
+dropdowns load all teams directly from `vlr.db`, show their region, and prevent
+selecting the same team twice. The database is opened read-only, and its location
+is resolved relative to the app, so it works from any working directory.
+
+Install the prediction dependencies with `python -m pip install -r requirements.txt`.
+Choose two teams and click **Predict winner** to see the predicted winner and
+both win probabilities. The app trains logistic regression on all rows in
+`features.csv` and builds matchup features from completed matches in `vlr.db`,
+using the same five features as `train_model.py`. Recent form uses the last five
+matches. Estimates reflect the stored dataset, which may not include current rosters
+or results. Changing either selection clears the previous prediction.
+
 ## Tech Stack
 
 - Python
